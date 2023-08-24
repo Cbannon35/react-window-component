@@ -1,5 +1,11 @@
 # react-window-component
 
-https://www.telerik.com/kendo-react-ui/components/dialogs/window/
+This is a component library that allows you to create a 'browser' within your browser! It is built on top of [react-rnd](https://www.npmjs.com/package/react-rnd) for its draggable and resizable features.
 
-https://www.npmjs.com/package/react-window-component
+## TODO:
+
+Quite a lot! This is a very early work
+
+- [x] Basic window
+- [ ] Advanced Window styling
+- [ ] Complete integration with dependency (react-rnd)

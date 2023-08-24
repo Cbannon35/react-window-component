@@ -1,0 +1,40 @@
+{
+  "name": "react-window-comp",
+  "version": "1.0.1",
+  "description": "A wrapper component for https://www.npmjs.com/package/react-rnd that adds a menu bar / tabs above the draggable/resizable component you pass in to render. Similar to a browser.",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Cbannon35/react-window-component.git"
+  },
+  "keywords": [
+    "draggable",
+    "resizeable",
+    "window",
+    "component"
+  ],
+  "author": "Christopher Bannon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Cbannon35/react-window-component/issues"
+  },
+  "homepage": "https://github.com/Cbannon35/react-window-component#readme",
+  "dependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.3.0",
+    "react": "^16.12.0",
+    "react-dom": "^18.2.0",
+    "react-rnd": "^10.4.1",
+    "style-loader": "^1.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}

@@ -1,0 +1,27 @@
+.hidden {
+  display: none;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.menu-bar {
+  border-radius: 1px;
+  border-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1px;
+  /* border bg-primary border-black flex flex-row justify-between px-1 */
+}
+
+.title {
+  cursor: move;
+  z-index: -100;
+  /* cursor-move -z-1 */
+}
