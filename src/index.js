@@ -1,28 +1,28 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Rnd } from "react-rnd"; // https://www.npmjs.com/package/react-rnd
 
 /* A default SVG to be used as an X to close out a window */
-import "./Xsvg.css";
-// const Xsvg = ({ w, h }) => {
-//   const [isXShape, setIsXShape] = useState(true);
+// import "./Xsvg.css";
+const Xsvg = ({ w, h }) => {
+  const [isXShape, setIsXShape] = useState(true);
 
-//   const toggleShape = () => {
-//     setIsXShape(!isXShape);
-//   };
-//   //{/*style={{ width: w, height: h }}*/}
-//   return (
-//     <div onClick={toggleShape}>
-//       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-//         <g className={`lines ${isXShape ? "pos-0" : "pos-1"}`}>
-//           <line className="line" x1="20" y1="20" x2="80" y2="80" />
-//           <line className="line" x1="80" y1="20" x2="20" y2="80" />
-//         </g>
-//       </svg>
-//     </div>
-//   );
-// };
+  const toggleShape = () => {
+    setIsXShape(!isXShape);
+  };
+  //{/*style={{ width: w, height: h }}*/}
+  return (
+    <div style={{ width: w, height: h }} onClick={toggleShape}>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <g className={`lines ${isXShape ? "pos-0" : "pos-1"}`}>
+          <line className="line" x1="20" y1="20" x2="80" y2="80" />
+          <line className="line" x1="80" y1="20" x2="20" y2="80" />
+        </g>
+      </svg>
+    </div>
+  );
+};
 
-import "./Window.css";
+// import "./Window.css";
 const Window = (
   maxw,
   minw,
@@ -68,7 +68,7 @@ const Window = (
   //     </div>
   //   </Rnd>
   // );
-  return <div>I am test comp</div>;
+  return <Xsvg />;
 };
 
 export default Window;
