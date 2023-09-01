@@ -9,7 +9,6 @@ const Xsvg = ({ w, h }) => {
   const toggleShape = () => {
     setIsXShape(!isXShape);
   };
-  //{/*style={{ width: w, height: h }}*/}
   return (
     <div style={{ width: w, height: h }} onClick={toggleShape}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -35,40 +34,40 @@ const Window = (
   lockAspectRatio,
   title,
   bgcolor,
-  render
+  display
 ) => {
-  //style={{ backgroundColor: bgcolor }}
-  // return (
-  //   <Rnd
-  //     default={{
-  //       x: startx ? startx : 0,
-  //       y: starty ? starty : 0,
-  //       width: initialWidth ? initialWidth : 320,
-  //       height: initialHeight ? initialHeight : 240,
-  //     }}
-  //     minWidth={minw ? minw : 0}
-  //     minHeight={minh ? minh : 0}
-  //     maxWidth={maxw ? maxw : 10000}
-  //     maxHeight={maxh ? maxh : 10000}
-  //     lockAspectRatio={lockAspectRatio}
-  //     lockAspectRatioExtraHeight={24}
-  //     dragHandleClassName="title"
-  //   >
-  //     <div className="w-full h-full">
-  //       <div className="menu-bar">
-  //         <strong className="h-full w-full title">{title}</strong>
-  //         <span
-  //           className="self-center cursor-pointer"
-  //           onClick={() => setMinimized(!minimized)}
-  //         >
-  //           <Xsvg />
-  //         </span>
-  //       </div>
-  //       <div className={`h-full ${minimized ? "hidden" : ""}`}>{render()}</div>
-  //     </div>
-  //   </Rnd>
-  // );
-  return <Xsvg />;
+  const [minimized, setMinimized] = useState(false);
+  return (
+    <Rnd
+      default={{
+        x: startx ? startx : 0,
+        y: starty ? starty : 0,
+        width: initialWidth ? initialWidth : 320,
+        height: initialHeight ? initialHeight : 240,
+      }}
+      minWidth={minw ? minw : 0}
+      minHeight={minh ? minh : 0}
+      maxWidth={maxw ? maxw : 10000}
+      maxHeight={maxh ? maxh : 10000}
+      lockAspectRatio={lockAspectRatio}
+      lockAspectRatioExtraHeight={24}
+      dragHandleClassName="title"
+    >
+      <div className="w-full h-full" style={{ backgroundColor: bgcolor }}>
+        <div className="menu-bar">
+          <strong className="h-full w-full title">{title}</strong>
+          <span
+            className="self-center cursor-pointer"
+            onClick={() => setMinimized(!minimized)}
+          >
+            <Xsvg />
+          </span>
+        </div>
+        {/* <div className={`h-full ${minimized ? "hidden" : ""}`}>{display()}</div> */}
+      </div>
+    </Rnd>
+  );
+  // return <Xsvg width={20} height={20} />;
 };
 
 export default Window;

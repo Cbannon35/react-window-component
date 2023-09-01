@@ -1,7 +1,7 @@
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import babel from "@rollup/plugin-babel";
-// import dts from "rollup-plugin-dts";
+import dts from "rollup-plugin-dts";
 
 const packageJson = require("./package.json");
 
@@ -28,10 +28,11 @@ export default [
         presets: ["@babel/env", "@babel/preset-react"],
       }),
     ],
+    external: ["react"],
   },
-  // {
-  //   // input: "src/index.d.ts",
-  //   // output: [{ file: "dist/index.d.ts", format: "esm" }],
-  //   // plugins: [dts()],
-  // },
+  {
+    input: "src/index.d.ts",
+    output: [{ file: "dist/index.d.ts", format: "esm" }],
+    plugins: [dts()],
+  },
 ];
